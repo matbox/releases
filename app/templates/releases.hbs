@@ -1,7 +1,7 @@
 <div class="row">
     <div class="large-2 columns">
         <ul class="side-nav">
-            {{#each model as release}}
+            {{#each model as |release|}}
               <li>
                   <a href="#" {{action "selectRelease" release on="click"}}>{{release.tag_name}}</a>
               </li>
