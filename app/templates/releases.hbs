@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="large-2 columns">
+        <ul class="side-nav">
+            {{#each model as release}}
+              <li>
+                  <a href="#" {{action "selectRelease" release on="click"}}>{{release.tag_name}}</a>
+              </li>
+            {{else}}
+              <b>Sorry, no content.</b>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="large-10 columns end">
+      {{outlet}}
+    </div>
+
+</div>
